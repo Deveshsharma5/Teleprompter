@@ -1,0 +1,47 @@
+{
+  "name": "teleprompter-app",
+  "version": "1.0.0",
+  "description": "Stealth AI Teleprompter",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "author": "Devesh",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-builder": "^latest"
+  },
+  "dependencies": {
+    "@mediapipe/camera_utils": "^0.3.1675466862",
+    "@mediapipe/hands": "^0.4.1675469240",
+    "@tensorflow-models/handpose": "^0.1.0",
+    "@tensorflow/tfjs": "^4.22.0",
+    "axios": "^1.14.0",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.33.0"
+  },
+  "build": {
+    "appId": "com.devesh.teleprompter",
+    "productName": "Stealth AI Teleprompter",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "renderer.js",
+      "style.css",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="bar">
+
+  <div id="scrollContainer">
+    <div id="scrollText"></div>
+  </div>
+
+  <div id="speedDisplay"></div>
+
+  <div id="inputPanel">
+    <textarea id="textInput" placeholder="Type your script..."></textarea>
+    <button id="openLibraryBtn">Library</button>
+    <div id="help">
+      ENTER = Start | SPACE = Pause | ↑ ↓ Speed | ESC = Close
+    </div>
+  </div>
+
+  <div id="libraryPanel">
+    <input id="searchInput" placeholder="Search scripts..." />
+    <input id="titleInput" placeholder="Script title..." />
+    <div id="libControls">
+      <button id="saveBtn">Save Script</button>
+    </div>
+    <div id="scriptList"></div>
+    <div id="libHelp">
+      Click to load • ✕ delete
+    </div>
+  </div>
+
+</div>
+
+<script src="renderer.js"></script>
+</body>
+</html>
